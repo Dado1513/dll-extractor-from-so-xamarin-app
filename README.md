@@ -21,3 +21,8 @@ virtualenv -p /usr/bin/python2.7  .venv-python2
 pyelftools==0.28
 yara-python==4.2.0
 ```
+
+### References
+
+- <https://securitygrind.com/reverse-engineering-a-xamarin-application/>
+- <https://github.com/maldroid/maldrolyzer/blob/master/plugins/z3core.py>
