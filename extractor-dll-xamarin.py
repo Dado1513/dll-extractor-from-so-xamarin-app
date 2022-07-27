@@ -16,7 +16,7 @@ if __name__ == "__main__":
         try:
             os.mkdir(output_dir)
         except: 
-            pass
+            pass    
         data = open(file_to_unpack).read()
         f = StringIO(data)
         elffile = ELFFile(f)

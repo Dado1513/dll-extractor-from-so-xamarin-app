@@ -26,3 +26,4 @@ yara-python==4.2.0
 
 - <https://securitygrind.com/reverse-engineering-a-xamarin-application/>
 - <https://github.com/maldroid/maldrolyzer/blob/master/plugins/z3core.py>
+- <https://github.com/icsharpcode/ILSpy/tree/master/ICSharpCode.ILSpyCmd>
