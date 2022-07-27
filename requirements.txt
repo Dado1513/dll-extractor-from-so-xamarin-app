@@ -1,0 +1,2 @@
+pyelftools==0.28
+yara-python==4.2.0
