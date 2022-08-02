@@ -3,8 +3,11 @@
 ### Requirements
 
 - python2.7
+- dotnet core
+- ilspycmd
 
 ```
+dotnet tool install ilspycmd -g 
 sudo apt-get install libffi-dev
 sudo apt-get install python2-dev
 ```

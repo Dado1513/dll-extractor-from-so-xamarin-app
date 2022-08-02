@@ -7,6 +7,7 @@ except ImportError:
 import gzip, string
 import sys
 import os
+import subprocess
 
 
 if __name__ == "__main__":
@@ -27,8 +28,19 @@ if __name__ == "__main__":
                 print(symbol.name)
                 dll_data = data[symbol['st_value']:symbol['st_value']+symbol['st_size']]
                 dll_data = gzip.GzipFile(fileobj=StringIO(dll_data)).read()
-                outfile = open(os.path.join(output_dir, symbol.name[14:].replace('_dll', '.dll')), 'w')
+                output_file_name = os.path.join(output_dir, symbol.name[14:].replace('_dll', '.dll'))
+                outfile = open(output_file_name, 'w')
                 outfile.write(dll_data)
                 outfile.close()
+
+                # convert dll into cs
+                try:
+                    cmd = ["ilspycmd", output_file, "-o", os.path.dirname(output_file)]
+                    ilspycmd_ouput = subprocess.check_output(cmd)
+                except Exception as e:
+                    print(f"[*] Error {output_file}")
+
+                
+
     else:
         print("[*] Usage python extractor-dll-xamarin.py file.so output-dir")
