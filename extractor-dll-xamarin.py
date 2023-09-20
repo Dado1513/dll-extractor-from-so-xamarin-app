@@ -38,7 +38,7 @@ if __name__ == "__main__":
                     cmd = ["ilspycmd", output_file, "-o", os.path.dirname(output_file)]
                     ilspycmd_ouput = subprocess.check_output(cmd)
                 except Exception as e:
-                    print(f"[*] Error {output_file}")
+                    print("[*] Error as "+ e)
 
                 
 

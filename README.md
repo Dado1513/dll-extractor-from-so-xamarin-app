@@ -15,6 +15,9 @@ sudo apt-get install python2-dev
 - enable virtualenv
 
 ```
+virtualenv venv-python3
+source venv-python3/bin/activate 
+pip install virtualenv==20.21.1
 virtualenv -p /usr/bin/python2.7  .venv-python2 
 ```
 
